@@ -8,3 +8,4 @@ else:
 
 print("Número de horas trabalhadas: ", horas_trabalhadas)
 print("Salário semanal: ", salario)
+# https://playground.ai.cloudflare.com/
