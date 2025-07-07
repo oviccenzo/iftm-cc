@@ -1,0 +1,91 @@
+Aqui está o código HTML completo com o CSS e JavaScript:
+
+*HTML*
+```
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedéx Básico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Pokedéx Básico</h1>
+  <div id="pokedex"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+```
+
+*CSS (em style.css)*
+```
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pokemon {
+  margin: 20px;
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  background-color: #f7f7f7;
+}
+
+.pokemon img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.pokemon h2 {
+  margin-top: 0;
+}
+```
+
+*JavaScript (em script.js)*
+```
+const pokemons = [
+  { id: 1, nome: "Bulbasaur", imagem: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" },
+  { id: 2, nome: "Ivysaur", imagem: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" },
+  { id: 3, nome: "Venusaur", imagem: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" },
+  // Adicione mais Pokémon aqui...
+];
+
+function criarPokemon(pokemon) {
+  const pokemonElement = document.createElement("div");
+  pokemonElement.classList.add("pokemon");
+
+  const imagem = document.createElement("img");
+  imagem.src = pokemon.imagem;
+  pokemonElement.appendChild(imagem);
+
+  const nome = document.createElement("h2");
+  nome.textContent = pokemon.nome;
+  pokemonElement.appendChild(nome);
+
+  return pokemonElement;
+}
+
+function popularPokedex() {
+  const pokedex = document.getElementById("pokedex");
+  pokemons.forEach((pokemon) => {
+    const pokemonElement = criarPokemon(pokemon);
+    pokedex.appendChild(pokemonElement);
+  });
+}
+
+popularPokedex();
+```
+
+Espero que isso ajude! Se você tiver alguma dúvida ou precisar de mais ajuda, sinta-se à vontade para perguntar.
