@@ -8,3 +8,6 @@ if (sexo == 'F'):
 
 
 print("Resultado: ", resultado)
+
+# https://playground.ai.cloudflare.com/
+# https://www.rocket.new/
