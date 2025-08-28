@@ -22,7 +22,3 @@ int main()
 
     return 0;
 }
-https://alura.tv/3HCi6a4
-https://graphonline.top/tmp/saved/Lf/LfTLuIlUYlLohPIv.png
-https://sorteador.com.br/resultado
-https://codepen.io/your-work
